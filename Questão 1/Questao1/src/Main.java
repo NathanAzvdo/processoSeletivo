@@ -8,11 +8,10 @@ public class Main {
     }
 
 
-    public static List<Integer> calcFib(int number){
+    public static List<Integer> calcFib(int number) {
         List<Integer> fibonacci = new ArrayList<>();
-        int i = 0;
 
-        while (true) {
+        for (int i = 0; i < number; i++) {
             if (i == 0 || i == 1) {
                 fibonacci.add(i);
             } else {
@@ -22,11 +21,11 @@ public class Main {
                 }
                 fibonacci.add(nextFib);
             }
-            i++;
         }
 
         return fibonacci;
     }
+    
 
     public static boolean checkNumber(List<Integer> fibonacci, int number) {
         for (int num : fibonacci) {
